@@ -21,12 +21,12 @@ h1 h2 … hN
 **Output**
 Print the minimum possible total cost incurred.
 
-**Sample Input **
+**Sample Input**
 
 4
 
 10 30 40 20
 
-**Sample Output **
+**Sample Output**
 
 30
