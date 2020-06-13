@@ -42,7 +42,7 @@ We need to travel from <strong>Bengaluru</strong> to all other places and we hav
 <p>Upon conversion, we get the below representation. Note that the graph is weighted and undirected. All the cities have been replaced by the alphabets associated with it and the edges have the cost value (to go from one node to other) displayed on it.<br>
 <img src="https://i.pinimg.com/564x/76/c0/62/76c062674c030484e573f5551dfec3f9.jpg" alt="Graph"></p>
 <h4 id="assign-cost-to-vertices.">2. Assign cost to vertices.</h4>
-<p>Assign cost of 0 to source vertex and <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> (Infinity) to all other vertices as shown in the image below.<br>
+<p>Assign cost of 0 to source vertex and <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span><span class="katex-html" aria-hidden="true"> (Infinity) to all other vertices as shown in the image below.<br>
 Maintain a list of unvisited vertices. Add all the vertices to the <code>unvisted</code> list.<br>
 <img src="https://i.pinimg.com/564x/e6/ed/a2/e6eda290895cce2ad2c7974b814d1b3c.jpg" alt="CostAssign"></p>
 <h4 id="calculate-minimum-cost-for-neighbors-of-selected-source.">3. Calculate minimum cost for neighbors of selected source.</h4>
