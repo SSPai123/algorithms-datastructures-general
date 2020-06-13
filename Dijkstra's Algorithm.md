@@ -50,9 +50,9 @@ Maintain a list of unvisited vertices. Add all the vertices to the <code>unviste
 <pre><code>Minimum(current cost of neighbor vertex, cost(B)+edge_value(neighbor,B))
 </code></pre>
 <ol>
-<li>For neighbor A: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> , 0+3) = 3</li>
-<li>For neighbor C: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> , 0+1) = 1</li>
-<li>For neighbor D: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> , 0+6) = 6<br>
+<li>For neighbor A: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span></span> , 0+3) = 3</li>
+<li>For neighbor C: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span> , 0+1) = 1</li>
+<li>For neighbor D: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span> , 0+6) = 6<br>
 <img src="https://i.pinimg.com/564x/00/70/8d/00708d62c3278c216147f65d53ca8887.jpg" alt="cost of neighbors"></li>
 </ol>
 <h4 id="select-next-vertex-with-smallest-cost-from-the-unvisited-list.">4. Select next vertex with smallest cost from the unvisited list.</h4>
@@ -62,7 +62,7 @@ Maintain a list of unvisited vertices. Add all the vertices to the <code>unviste
 </code></pre>
 <ol>
 <li>For neighbor A: cost = Minimum(3 , 1+2) = 3</li>
-<li>For neighbor E: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span>, 1+4) = 5</li>
+<li>For neighbor E: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span>, 1+4) = 5</li>
 <li>For neighbor D: cost = Minimum(6 , 1+4) = 5</li>
 </ol>
 <p>Observe that the cost value of node D is updated by the new minimum cost calculated.<br>
