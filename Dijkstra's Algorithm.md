@@ -4,7 +4,9 @@
 ---
 
 <h1 id="dijkstras-algorithm">Dijkstra’s algorithm</h1>
-<p>The algorithm is used to find the <strong>shortest distance</strong> between a node (source node) to any (or every) other nodes (destination nodes) in a graph. This algorithm is sometimes referred to as “Single Source Shortest Path Algorithm”.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The algorithm was developed by a Dutch computer scientist Edsger W. Dijkstra in 1956. It is used to find the <strong>shortest path</strong> between a node/vertex (source node) to any (or every) other nodes/vertices (destination nodes) in a graph. A graph is basically an interconnection of nodes connected by edges.</p>
+<p>This algorithm is sometimes referred to as <strong>Single Source Shortest Path Algorithm</strong> due to its nature of implementation.</p>
 <h2 id="applications">Applications</h2>
 <p>Before diving into any algorithm, its very much necessary for us to understand what are the real world applications of it.</p>
 <p>Majority of the problems that we encounter in real life scenarios deals with finding solutions to shortest path based problems.</p>
@@ -17,12 +19,13 @@
 </ol>
 <h2 id="explanation">Explanation</h2>
 <p>In order to find the shortest path, Dijkstra’s algorithm mainly allocates a “cost” value taken to reach the destination vertex from the source vertex. The “cost” can be mapped to disance, money or time taken to reach from source to a destination.</p>
-<p>Below are the steps to followed for solving using Dijkstra’s algorithm:</p>
+<p><img src="https://i.pinimg.com/564x/e4/ca/08/e4ca08cf6373a35539a0136a739a46f0.jpg" alt="Sample Graph"></p>
+<p>Below are the steps to be followed for solving using Dijkstra’s algorithm:</p>
 <ol>
-<li>Convert any problem to its graph equivalent representation. (A graph is basically an interconnection of vertices connected by edges.)</li>
+<li>Convert any problem to its graph equivalent representation.</li>
 <li>Maintain a list of unvisited vertices. Assign a vertex as “source” and also allocate a maximum possible cost (infinity) to every other vertex. The cost of the source to itself will be zero as it actually takes nothing to go to itself.</li>
 <li>In every step of the algorithm, it tries to minimize the cost for each vertex.</li>
-<li>For every unvisited neighbor (V2, V3, V4) of the current vertex (V1) calculate the new cost from V1.</li>
+<li>For every unvisited neighbor (V2, V3) of the current vertex (V1) calculate the new cost from V1.</li>
 <li>The new cost of V2 is calculated as :</li>
 </ol>
 <pre><code>Minimum( existing cost of V2 , (sum of cost of V1 + the cost of edge from V1 to V2) )
@@ -42,7 +45,7 @@ We need to travel from <strong>Bengaluru</strong> to all other places and we hav
 <p>Upon conversion, we get the below representation. Note that the graph is weighted and undirected. All the cities have been replaced by the alphabets associated with it and the edges have the cost value (to go from one node to other) displayed on it.<br>
 <img src="https://i.pinimg.com/564x/76/c0/62/76c062674c030484e573f5551dfec3f9.jpg" alt="Graph"></p>
 <h4 id="assign-cost-to-vertices.">2. Assign cost to vertices.</h4>
-<p>Assign cost of 0 to source vertex and <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span><span class="katex-html" aria-hidden="true"> (Infinity) to all other vertices as shown in the image below.<br>
+<p>Assign cost of 0 to source vertex and <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> (Infinity) to all other vertices as shown in the image below.<br>
 Maintain a list of unvisited vertices. Add all the vertices to the <code>unvisted</code> list.<br>
 <img src="https://i.pinimg.com/564x/e6/ed/a2/e6eda290895cce2ad2c7974b814d1b3c.jpg" alt="CostAssign"></p>
 <h4 id="calculate-minimum-cost-for-neighbors-of-selected-source.">3. Calculate minimum cost for neighbors of selected source.</h4>
@@ -50,9 +53,9 @@ Maintain a list of unvisited vertices. Add all the vertices to the <code>unviste
 <pre><code>Minimum(current cost of neighbor vertex, cost(B)+edge_value(neighbor,B))
 </code></pre>
 <ol>
-<li>For neighbor A: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span></span> , 0+3) = 3</li>
-<li>For neighbor C: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span> , 0+1) = 1</li>
-<li>For neighbor D: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span> , 0+6) = 6<br>
+<li>For neighbor A: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> , 0+3) = 3</li>
+<li>For neighbor C: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> , 0+1) = 1</li>
+<li>For neighbor D: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span> , 0+6) = 6<br>
 <img src="https://i.pinimg.com/564x/00/70/8d/00708d62c3278c216147f65d53ca8887.jpg" alt="cost of neighbors"></li>
 </ol>
 <h4 id="select-next-vertex-with-smallest-cost-from-the-unvisited-list.">4. Select next vertex with smallest cost from the unvisited list.</h4>
@@ -62,7 +65,7 @@ Maintain a list of unvisited vertices. Add all the vertices to the <code>unviste
 </code></pre>
 <ol>
 <li>For neighbor A: cost = Minimum(3 , 1+2) = 3</li>
-<li>For neighbor E: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow></span></span>, 1+4) = 5</li>
+<li>For neighbor E: cost = Minimum(<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord">∞</span></span></span></span></span>, 1+4) = 5</li>
 <li>For neighbor D: cost = Minimum(6 , 1+4) = 5</li>
 </ol>
 <p>Observe that the cost value of node D is updated by the new minimum cost calculated.<br>
