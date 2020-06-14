@@ -109,7 +109,7 @@ Maintain a list of unvisited vertices. Add all the vertices to the <code>unviste
 <ol>
 <li>We can further reduce the time complexity of this algorithm by using Binary Heap as data structure for Priority Queue implementation instead of list.</li>
 <li>The priority queue implementation is for efficiently finding the node with minimum cost and then updating the cost value associated with the node.</li>
-<li>With this, the time complexity will be <code>O((E+V)*LogV) = O(ELogV)</code></li>
+<li>With this, the time complexity will be <code>O((E+V)*LogV) = O(ELogV)</code> where E is the number of edges and V is the number of vertices in a graph</li>
 </ol>
 <h2 id="additional-information">Additional Information</h2>
 <ol>
