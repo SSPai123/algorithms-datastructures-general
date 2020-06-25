@@ -35,7 +35,7 @@
 <strong>Step 2</strong> − Partition the array on the basis of pivot<br>
 <strong>Step 3</strong> − Apply quick sort on left partition recursively<br>
 <strong>Step 4</strong> − Apply quick sort on right partition recursively</p>
-<h2 id="step-wise-explanation-with-example">Step wise explanation with example</h2>
+<h2 id="example">Example</h2>
 <h3 id="problem-statement">Problem Statement</h3>
 <p>Consider the following array: 50, 23, 9, 18, 61, 32. We need to sort this array in the most efficient manner without using extra place (inplace sorting).</p>
 <h3 id="solution">Solution</h3>
