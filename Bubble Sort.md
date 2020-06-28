@@ -82,19 +82,20 @@ After the nth pass, <strong>the nth largest element(smallest element) will be at
 Thus, the sorted array will look like this:</p>
 <p><img src="https://tutorials-image.s3-us-west-2.amazonaws.com/final+sorted+array+using+bubble+sort.png" alt=""></p>
 <h2 id="pseudo-code">Pseudo Code</h2>
-<pre><code>/**
+<pre><code>
+/**
 * The main function that implements bubble sort.
 * @Parameters: array, total elements
 */
 bubbleSort( Arr[], total_elements){
    
-   for(i = 0; i&lt;total_elements - 1;i++){
+   for(i = 0; i<total_elements - 1;i++){
 	   // flag to check if array is already sorted
       swapped = false;	
 		
-      for(j = 0; j&lt;total_elements - i - 2; j++){ 
+      for(j = 0; j<total_elements - i - 2; j++){ 
          // compare the adjacent elements  
-         if (Arr[j] &gt; Arr[j+1]){
+         if (Arr[j] > Arr[j+1]){
             // swap them
             swap(Arr[j], Arr[j+1]);	 
             swapped = true;	// any swap done, will signify array isnt sorted.
@@ -176,24 +177,24 @@ The “bubble” sort is called so because the list elements with greater value 
 </ul>
 </li>
 </ul>
-<pre><code>    recursiveBubbleSort(arr[], n)
- 	{
-    		// Base case
-    		if (n == 1)
-    		return;
-    		
-    		// One pass of bubble sort. After
-    		// this pass, the largest element
-    		// is moved (or bubbled) to end.
-    		for(i=0; i&lt;n-1; i++){
-	    		if(arr[i] &gt; arr[i+1])
-	    		{
-	    		 swap(arr[i], arr[i+1]);
-	    		}
-	    	}
-    	
-    		// recursion for remaining elements in array
-    		recursiveBubbleSort(arr, n-1);
+<pre><code>    
+recursiveBubbleSort(arr[], n){
+	// Base case
+	if (n == 1)
+	return;
+
+	// One pass of bubble sort. After
+	// this pass, the largest element
+	// is moved (or bubbled) to end.
+	for(i=0; i<n-1; i++){
+		if(arr[i] > arr[i+1])
+		{
+		 swap(arr[i], arr[i+1]);
+		}
+	}
+
+	// recursion for remaining elements in array
+	recursiveBubbleSort(arr, n-1);
     }
 </code></pre>
 
